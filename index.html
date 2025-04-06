@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Köse'nin Kerhanesi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #dcdcdc;
+    }
+
+    header {
+      background-color: #14532d; /* yeşil ton */
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .video-section, .gallery-section {
+      margin-bottom: 3rem;
+    }
+
+    .video-pair {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .video-pair iframe {
+      flex: 1 1 48%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #1a1a1a; /* soluk siyah detay */
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #1a1a1a;
+      color: #999;
+    }
+
+    /* Hover efektleri */
+    .gallery img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .video-pair iframe:hover {
+      border: 2px solid #14532d; /* yeşil tonunda sınır */
+    }
+
+    /* Footer stilleri */
+    footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Köse'nin Kerhanesi</h1>
+  </header>
+
+  <div class="container">
+    <section class="video-section">
+      <h2>Tanıtım Videoları</h2>
+      <div class="video-pair">
+        <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe>
+        <!-- Yeni video linki -->
+        <iframe src="https://www.youtube.com/embed/LHQ4gNlpK08" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <h2>Galeri</h2>
+      <div class="gallery">
+        <!-- Görsel 1, Google Drive'dan bağlantı ile değiştirildi -->
+        <img src="https://drive.google.com/uc?id=1rWnC4lGSM5MiN2yIGHFc0uNrBRkEg-Sh" alt="Görsel 1">
+        <img src="https://via.placeholder.com/300x200?text=Görsel+2" alt="Görsel 2">
+        <img src="https://via.placeholder.com/300x200?text=Görsel+3" alt="Görsel 3">
+        <img src="https://via.placeholder.com/300x200?text=Görsel+4" alt="Görsel 4">
+        <!-- Yeni eklenen görseller -->
+        <img src="https://via.placeholder.com/300x200?text=Görsel+5" alt="Görsel 5">
+        <img src="https://via.placeholder.com/300x200?text=Görsel+6" alt="Görsel 6">
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Köse'nin Kerhanesi. Tüm haklar saklıdır.</p>
+  </footer>
+</body>
+</html>
