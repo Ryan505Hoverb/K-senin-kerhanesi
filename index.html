@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Köse'nin Kerhanesi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -12,16 +13,61 @@
       color: #dcdcdc;
     }
 
+    .floating-logo {
+      position: absolute;
+      top: 20px;
+      height: 75px;
+      width: auto;
+      z-index: 999;
+      border: 2px solid #ab20fd;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #ab20fd, 0 0 30px #ab20fd;
+    }
+
+    .floating-logo.right {
+      right: 0;
+      left: auto;
+    }
+
+    .floating-logo.left {
+      left: 0;
+    }
+
     header {
-      background-color: #14532d; /* yeşil ton */
-      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem 1rem;
       text-align: center;
+      border-bottom: 2px solid #2CFF05;
+      box-shadow: 0 0 20px #2CFF05;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      border-radius: 8px;
+      border: 2px solid #ab20fd;
+      box-shadow: 0 0 12px #ab20fd, 0 0 24px #ab20fd;
     }
 
     header h1 {
       margin: 0;
-      color: #fff;
-      font-size: 2rem;
+      font-size: 3rem;
+      font-family: 'Press Start 2P', cursive;
+      color: #2CFF05;
+      text-shadow: 0 0 8px #2CFF05, 0 0 16px #2CFF05;
+      animation: flicker 1.3s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      100% { opacity: 0.6; }
     }
 
     .container {
@@ -32,31 +78,104 @@
 
     .video-section, .gallery-section {
       margin-bottom: 3rem;
+      border: 2px solid #2CFF05;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px #2CFF05;
+    }
+
+    .video-section h2 {
+      font-family: 'Press Start 2P', cursive;
+      color: #2CFF05;
+      text-align: center;
+      font-size: 2rem;
+      animation: glow 2s infinite alternate;
+    }
+
+    .gallery-section h2 {
+      font-family: 'Press Start 2P', cursive;
+      color: #2CFF05;
+      text-align: center;
+      font-size: 2rem;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #2CFF05;
+      }
+      to {
+        text-shadow: 0 0 20px #2CFF05;
+      }
     }
 
     .video-pair {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      margin-top: 1rem;
     }
 
-    .video-pair iframe {
+    .video-wrapper {
       flex: 1 1 48%;
+      border: 2px solid #2CFF05;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px #2CFF05;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
       height: 300px;
       border: none;
-      border-radius: 8px;
+      display: block;
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
     }
 
     .gallery img {
       width: 100%;
+      max-width: 400px;
       border-radius: 8px;
-      border: 2px solid #1a1a1a; /* soluk siyah detay */
+      border: 4px solid #2CFF05;
+      box-shadow: 0 0 10px #2CFF05;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery img.gorsel5,
+    .gallery img.gorsel6 {
+      max-width: 400px;
+    }
+
+    .rainbow-border {
+      border: 4px solid transparent;
+      border-radius: 8px;
+      background: conic-gradient(red, orange, yellow, green, cyan, blue, indigo, violet, red);
+      background-size: 800% 800%;
+      animation: rainbowBorderMove 0.6s linear infinite;
+      box-shadow: 0 0 20px white;
+      padding: 4px;
+    }
+
+    @keyframes rainbowBorderMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
 
     footer {
@@ -66,17 +185,6 @@
       color: #999;
     }
 
-    /* Hover efektleri */
-    .gallery img:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease;
-    }
-
-    .video-pair iframe:hover {
-      border: 2px solid #14532d; /* yeşil tonunda sınır */
-    }
-
-    /* Footer stilleri */
     footer p {
       font-size: 0.9rem;
       color: #ccc;
@@ -84,31 +192,47 @@
   </style>
 </head>
 <body>
+
+  <!-- Sol köşeye yeni logo -->
+  <img src="https://i.imgur.com/aajrx8U.jpeg" alt="Köse Sol Logo" class="floating-logo left" />
+
+  <!-- Sağda sabit logo -->
+  <img src="https://i.imgur.com/B8t4GUS.jpeg" alt="Köse Sağ Logo" class="floating-logo right" />
+
   <header>
-    <h1>Köse'nin Kerhanesi</h1>
+    <div class="header-content">
+      <h1>Köse'nin Kerhanesi</h1>
+    </div>
   </header>
 
   <div class="container">
     <section class="video-section">
       <h2>Tanıtım Videoları</h2>
       <div class="video-pair">
-        <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe>
-        <!-- Yeni video linki -->
-        <iframe src="https://www.youtube.com/embed/LHQ4gNlpK08" allowfullscreen></iframe>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/LHQ4gNlpK08" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <section class="gallery-section">
       <h2>Galeri</h2>
       <div class="gallery">
-        <!-- Görsel 1, Google Drive'dan bağlantı ile değiştirildi -->
-        <img src="https://drive.google.com/uc?id=1rWnC4lGSM5MiN2yIGHFc0uNrBRkEg-Sh" alt="Görsel 1">
-        <img src="https://via.placeholder.com/300x200?text=Görsel+2" alt="Görsel 2">
-        <img src="https://via.placeholder.com/300x200?text=Görsel+3" alt="Görsel 3">
-        <img src="https://via.placeholder.com/300x200?text=Görsel+4" alt="Görsel 4">
-        <!-- Yeni eklenen görseller -->
-        <img src="https://via.placeholder.com/300x200?text=Görsel+5" alt="Görsel 5">
-        <img src="https://via.placeholder.com/300x200?text=Görsel+6" alt="Görsel 6">
+        <div class="gallery-row">
+          <img src="https://i.imgur.com/0py85rb.jpeg" alt="Görsel 1">
+          <img src="https://i.imgur.com/yde0vzj.jpeg" alt="Görsel 3">
+        </div>
+        <div class="gallery-row">
+          <img src="https://i.imgur.com/K4YDxHO.jpeg" alt="Görsel 2">
+          <img src="https://i.imgur.com/2BbMnZO.jpeg" alt="Görsel 4">
+          <img class="gorsel5" src="https://i.imgur.com/6VV5VKV.jpeg" alt="Görsel 5">
+          <span class="rainbow-border">
+            <img class="gorsel6" src="https://i.imgur.com/i7stNo3.jpeg" alt="Görsel 6">
+          </span>
+        </div>
       </div>
     </section>
   </div>
