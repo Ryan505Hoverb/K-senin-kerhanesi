@@ -16,7 +16,7 @@
     .floating-logo {
       position: absolute;
       top: 20px;
-      height: 75px;
+      height: 140px;
       width: auto;
       z-index: 999;
       border: 2px solid #ab20fd;
@@ -25,17 +25,24 @@
     }
 
     .floating-logo.right {
-      right: 0;
-      left: auto;
+      right: 0px;
+    }
+
+    .floating-logo.right-second {
+      right: 165px;
     }
 
     .floating-logo.left {
-      left: 0;
+      left: 0px;
+    }
+
+    .floating-logo.second-left {
+      left: 165px;
     }
 
     header {
       background-color: rgba(0, 0, 0, 0.8);
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 6rem;
       text-align: center;
       border-bottom: 2px solid #2CFF05;
       box-shadow: 0 0 20px #2CFF05;
@@ -48,35 +55,28 @@
       gap: 1rem;
     }
 
-    .logo {
-      height: 60px;
-      width: auto;
-      border-radius: 8px;
-      border: 2px solid #ab20fd;
-      box-shadow: 0 0 12px #ab20fd, 0 0 24px #ab20fd;
-    }
-
     header h1 {
       margin: 0;
       font-size: 3rem;
       font-family: 'Press Start 2P', cursive;
       color: #2CFF05;
       text-shadow: 0 0 8px #2CFF05, 0 0 16px #2CFF05;
-      animation: flicker 1.3s infinite alternate;
+      animation: blinkText 1.2s infinite;
     }
 
-    @keyframes flicker {
+    @keyframes blinkText {
       0% { opacity: 1; }
-      100% { opacity: 0.6; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
 
-    .video-section, .gallery-section {
+    .video-section, .gallery-section, .cinema-section {
       margin-bottom: 3rem;
       border: 2px solid #2CFF05;
       border-radius: 12px;
@@ -84,19 +84,11 @@
       box-shadow: 0 0 15px #2CFF05;
     }
 
-    .video-section h2 {
-      font-family: 'Press Start 2P', cursive;
+    .video-section h2, .gallery-section h2, .cinema-section h2 {
       color: #2CFF05;
       text-align: center;
-      font-size: 2rem;
-      animation: glow 2s infinite alternate;
-    }
-
-    .gallery-section h2 {
+      font-size: 2.5rem;
       font-family: 'Press Start 2P', cursive;
-      color: #2CFF05;
-      text-align: center;
-      font-size: 2rem;
       animation: glow 2s infinite alternate;
     }
 
@@ -117,7 +109,7 @@
     }
 
     .video-wrapper {
-      flex: 1 1 48%;
+      flex: 1 1 30%;
       border: 2px solid #2CFF05;
       border-radius: 12px;
       overflow: hidden;
@@ -132,35 +124,24 @@
     }
 
     .gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 0.7rem;
       margin-top: 1rem;
-    }
-
-    .gallery-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
+      justify-items: center;
     }
 
     .gallery img {
       width: 100%;
-      max-width: 400px;
       border-radius: 8px;
-      border: 4px solid #2CFF05;
+      border: 2px solid #2CFF05;
       box-shadow: 0 0 10px #2CFF05;
       transition: transform 0.3s ease;
+      max-width: 100%;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
-    }
-
-    .gallery img.gorsel5,
-    .gallery img.gorsel6 {
-      max-width: 400px;
     }
 
     .rainbow-border {
@@ -189,34 +170,13 @@
       font-size: 0.9rem;
       color: #ccc;
     }
-
-    .gorsel5 {
-      cursor: pointer;
-      position: relative;
-    }
-    
-    /* Fotoğraf üzerine oynat/duraklat simgesini yerleştirme */
-    .play-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 5px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 20px;
-      z-index: 10;
-    }
-
   </style>
 </head>
 <body>
-
-  <!-- Sol köşeye yeni logo -->
-  <img src="https://i.imgur.com/aajrx8U.jpeg" alt="Köse Sol Logo" class="floating-logo left" />
-
-  <!-- Sağda sabit logo -->
-  <img src="https://i.imgur.com/B8t4GUS.jpeg" alt="Köse Sağ Logo" class="floating-logo right" />
+  <img src="https://i.imgur.com/aajrx8U.jpeg" alt="Köse Sol Logo" class="floating-logo left" style="height: 140px;"/>
+  <img src="https://imgur.com/yC7DGR8.jpeg" alt="Köse Sol Logo 2" class="floating-logo second-left" style="height: 140px;"/>
+  <img src="https://i.imgur.com/81hJdEn.jpeg" alt="Köse Sağ Logo 1" class="floating-logo right-second" style="height: 140px;"/>
+  <img src="https://i.imgur.com/B8t4GUS.jpeg" alt="Köse Sağ Logo 2" class="floating-logo right" style="height: 140px;"/>
 
   <header>
     <div class="header-content">
@@ -225,14 +185,17 @@
   </header>
 
   <div class="container">
-    <section class="video-section">
-      <h2>Tanıtım Videoları</h2>
+    <section class="cinema-section">
+      <h2>Sinema</h2>
       <div class="video-pair">
         <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/uOuImMOBSMA" allowfullscreen></iframe>
         </div>
         <div class="video-wrapper">
           <iframe src="https://www.youtube.com/embed/LHQ4gNlpK08" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -240,18 +203,19 @@
     <section class="gallery-section">
       <h2>Galeri</h2>
       <div class="gallery">
-        <div class="gallery-row">
-          <img src="https://i.imgur.com/0py85rb.jpeg" alt="Görsel 1">
-          <img src="https://i.imgur.com/yde0vzj.jpeg" alt="Görsel 3">
-        </div>
-        <div class="gallery-row">
-          <img src="https://i.imgur.com/K4YDxHO.jpeg" alt="Görsel 2">
-          <img src="https://i.imgur.com/2BbMnZO.jpeg" alt="Görsel 4">
-          <img class="gorsel5" src="https://i.imgur.com/6VV5VKV.jpeg" alt="Görsel 5">
-          <span class="rainbow-border">
-            <img class="gorsel6" src="https://i.imgur.com/i7stNo3.jpeg" alt="Görsel 6">
-          </span>
-        </div>
+        <img src="https://i.imgur.com/0py85rb.jpeg" alt="Görsel 1">
+        <img src="https://i.imgur.com/yde0vzj.jpeg" alt="Görsel 3">
+        <img src="https://i.imgur.com/K4YDxHO.jpeg" alt="Görsel 2">
+        <img src="https://i.imgur.com/6VV5VKV.jpeg" alt="Görsel X">
+        <img src="https://i.imgur.com/2BbMnZO.jpeg" alt="Görsel 4">
+        <img src="https://i.imgur.com/4EIQZKL.jpeg" alt="Görsel 8">
+        <img src="https://i.imgur.com/lC4qx3i.jpeg" alt="Görsel 9">
+        <img src="https://i.imgur.com/WlLvGK9.jpeg" alt="Görsel Yeni2">
+        <span class="rainbow-border">
+          <img src="https://imgur.com/i7stNo3.jpeg" alt="Görsel Yeni">
+        </span>
+        <img src="https://i.imgur.com/plNgzx5.jpeg" alt="Görsel 10">
+        <img src="https://i.imgur.com/qubDxqT.jpeg" alt="Görsel 11">
       </div>
     </section>
   </div>
@@ -259,6 +223,5 @@
   <footer>
     <p>&copy; 2025 Köse'nin Kerhanesi. Tüm haklar saklıdır.</p>
   </footer>
-
-  <!-- SoundCloud müziği gömülü -->
-  <iframe id="music" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/gruposonador/el-gigante-de-hierro-2&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true
+</body>
+</html>
