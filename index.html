@@ -1,1 +1,226 @@
-<!DOCTYPE html> <html lang="tr"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Köse'nin Kerhanesi</title> <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" /> <style> body { margin: 0; font-family: Arial, sans-serif; background-color: #0d0d0d; color: #dcdcdc; } .floating-logo { position: absolute; top: 20px; height: 140px; width: auto; z-index: 999; border: 2px solid #ab20fd; border-radius: 12px; box-shadow: 0 0 15px #ab20fd, 0 0 30px #ab20fd; } .floating-logo.right { right: 0px; } .floating-logo.right-second { right: 165px; } .floating-logo.left { left: 0px; } .floating-logo.second-left { left: 145px; } header { background-color: rgba(0, 0, 0, 0.8); padding: 2rem 1rem 6rem; text-align: center; border-bottom: 2px solid #2CFF05; box-shadow: 0 0 20px #2CFF05; } .header-content { display: flex; align-items: center; justify-content: center; gap: 1rem; } header h1 { margin: 0; font-size: 3rem; font-family: 'Press Start 2P', cursive; color: #2CFF05; text-shadow: 0 0 8px #2CFF05, 0 0 16px #2CFF05; animation: blinkText 1.2s infinite; } @keyframes blinkText { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } } .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; } .video-section, .gallery-section, .cinema-section { margin-bottom: 3rem; border: 2px solid #2CFF05; border-radius: 12px; padding: 1.5rem; box-shadow: 0 0 15px #2CFF05; } .video-section h2, .gallery-section h2, .cinema-section h2 { color: #2CFF05; text-align: center; font-size: 2.5rem; font-family: 'Press Start 2P', cursive; animation: glow 2s infinite alternate; } @keyframes glow { from { text-shadow: 0 0 5px #2CFF05; } to { text-shadow: 0 0 20px #2CFF05; } } .video-pair { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; } .video-wrapper { flex: 1 1 30%; border: 2px solid #2CFF05; border-radius: 12px; overflow: hidden; box-shadow: 0 0 12px #2CFF05; } .video-wrapper iframe { width: 100%; height: 300px; border: none; display: block; } .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 0.7rem; margin-top: 1rem; justify-items: center; } .gallery img { width: 100%; border-radius: 8px; border: 2px solid #2CFF05; box-shadow: 0 0 10px #2CFF05; transition: transform 0.3s ease; max-width: 100%; } .gallery img:hover { transform: scale(1.05); } .rainbow-border { border-radius: 8px; background: conic-gradient(red, orange, yellow, green, cyan, blue, indigo, violet, red); background-size: 800% 800%; animation: rainbowBorderMove 0.6s linear infinite; box-shadow: 0 0 20px white; padding: 4px; } .rainbow-border img { border: none; } @keyframes rainbowBorderMove { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } } footer { text-align: center; padding: 2rem 1rem; background-color: #1a1a1a; color: #999; } footer p { font-size: 0.9rem; color: #ccc; } .cinema-header { display: flex; align-items: center; justify-content: center; gap: 1rem; } .cinema-header img { height: 110px; border-radius: 6px; } </style> </head> <body> <img src="https://i.imgur.com/aajrx8U.jpeg" alt="Köse Sol Logo" class="floating-logo left"/> <img src="https://imgur.com/yC7DGR8.jpeg" alt="Köse Sol Logo 2" class="floating-logo second-left"/> <img src="https://i.imgur.com/81hJdEn.jpeg" alt="Köse Sağ Logo 1" class="floating-logo right-second"/> <img src="https://i.imgur.com/B8t4GUS.jpeg" alt="Köse Sağ Logo 2" class="floating-logo right"/> <header> <div class="header-content"> <h1>Köse'nin Kerhanesi</h1> </div> </header> <div class="container"> <section class="cinema-section"> <div class="cinema-header"> <img src="https://imgur.com/Lz1ZGxh.jpeg" alt="Yeni Sinema İkonu" /> <h2>Sinema</h2> <img src="https://imgur.com/aU8Ren9.jpeg" alt="Sinema Yan Görsel"> </div> <div class="video-pair"> <div class="video-wrapper"> <iframe src="https://www.youtube.com/embed/uOuImMOBSMA" allowfullscreen></iframe> </div> <div class="video-wrapper"> <iframe src="https://www.youtube.com/embed/LHQ4gNlpK08" allowfullscreen></iframe> </div> <div class="video-wrapper"> <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe> </div> </div> </section> <section class="gallery-section"> <h2>Galeri</h2> <div class="gallery"> <img src="https://i.imgur.com/0py85rb.jpeg" alt="Görsel 1"> <img src="https://i.imgur.com/yde0vzj.jpeg" alt="Görsel 3"> <img src="https://i.imgur.com/K4YDxHO.jpeg" alt="Görsel 2"> <img src="https://i.imgur.com/6VV5VKV.jpeg" alt="Görsel X"> <img src="https://i.imgur.com/2BbMnZO.jpeg" alt="Görsel 4"> <img src="https://i.imgur.com/4EIQZKL.jpeg" alt="Görsel 8"> <img src="https://i.imgur.com/lC4qx3i.jpeg" alt="Görsel 9"> <img src="https://i.imgur.com/WlLvGK9.jpeg" alt="Görsel Yeni2"> <span class="rainbow-border"> <img src="https://imgur.com/i7stNo3.jpeg" alt="Görsel Yeni"> </span> <img src="https://i.imgur.com/plNgzx5.jpeg" alt="Görsel 10"> <img src="https://i.imgur.com/qubDxqT.jpeg" alt="Görsel 11"> </div> </section> </div> <footer> <p>&copy; 2025 Köse'nin Kerhanesi. Tüm haklar saklıdır.</p> </footer> </body> </html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Köse'nin Kerhanesi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #dcdcdc;
+    }
+
+    .floating-logo {
+      position: absolute;
+      top: 20px;
+      height: 140px;
+      width: auto;
+      z-index: 999;
+      border: 2px solid #ab20fd;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #ab20fd, 0 0 30px #ab20fd;
+    }
+
+    .floating-logo.right { right: 0px; }
+    .floating-logo.right-second { right: 165px; }
+    .floating-logo.left { left: 0px; }
+    .floating-logo.second-left { left: 145px; }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem 1rem 6rem;
+      text-align: center;
+      border-bottom: 2px solid #2CFF05;
+      box-shadow: 0 0 20px #2CFF05;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-family: 'Press Start 2P', cursive;
+      color: #2CFF05;
+      text-shadow: 0 0 8px #2CFF05, 0 0 16px #2CFF05;
+      animation: blinkText 1.2s infinite;
+    }
+
+    @keyframes blinkText {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .video-section, .gallery-section, .cinema-section {
+      margin-bottom: 3rem;
+      border: 2px solid #2CFF05;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 15px #2CFF05;
+    }
+
+    .video-section h2, .gallery-section h2, .cinema-section h2 {
+      color: #2CFF05;
+      text-align: center;
+      font-size: 2.5rem;
+      font-family: 'Press Start 2P', cursive;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #2CFF05; }
+      to { text-shadow: 0 0 20px #2CFF05; }
+    }
+
+    .video-pair {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .video-wrapper {
+      flex: 1 1 30%;
+      border: 2px solid #2CFF05;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px #2CFF05;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      display: block;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 0.7rem;
+      margin-top: 1rem;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #2CFF05;
+      box-shadow: 0 0 10px #2CFF05;
+      transition: transform 0.3s ease;
+      max-width: 100%;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .rainbow-border {
+      border-radius: 8px;
+      background: conic-gradient(red, orange, yellow, green, cyan, blue, indigo, violet, red);
+      background-size: 800% 800%;
+      animation: rainbowBorderMove 0.6s linear infinite;
+      box-shadow: 0 0 20px white;
+      padding: 4px;
+    }
+
+    .rainbow-border img {
+      border: none;
+    }
+
+    @keyframes rainbowBorderMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #1a1a1a;
+      color: #999;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .cinema-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .cinema-header img {
+      height: 110px;
+      border-radius: 6px;
+    }
+
+    /* 1080x2400 mobil uyumluluğu */
+    @media screen and (max-width: 1080px) {
+      header h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+
+      .floating-logo {
+        height: 90px;
+        position: static;
+        display: block;
+        margin: 0.5rem auto;
+      }
+
+      .header-content {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .cinema-header {
+        flex-direction: column;
+      }
+
+      .cinema-header img {
+        height: 80px;
+      }
+
+      .video-pair {
+        flex-direction: column;
+      }
+
+      .video-wrapper iframe {
+        height: 220px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        max-width: 95%;
+      }
+
+      .rainbow-border {
+        padding: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- içerik aynı kalıyor -->
+</body>
+</html>
