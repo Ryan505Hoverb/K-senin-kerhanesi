@@ -116,6 +116,11 @@
       justify-items: center;
     }
 
+    .gallery figure {
+      margin: 0;
+      text-align: center;
+    }
+
     .gallery img {
       width: 100%;
       border-radius: 8px;
@@ -127,6 +132,13 @@
 
     .gallery img:hover {
       transform: scale(1.05);
+    }
+
+    .gallery figcaption {
+      color: #2CFF05;
+      margin-top: 0.5rem;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.8rem;
     }
 
     .rainbow-border {
@@ -202,7 +214,7 @@
       }
 
       .video-wrapper iframe {
-        height: 220px;
+        height: 420px;
       }
 
       .gallery {
@@ -220,59 +232,53 @@
   </style>
 </head>
 <body>
-  <img src="https://i.imgur.com/aajrx8U.jpeg" alt="Köse Sol Logo" class="floating-logo left"/>
-  <img src="https://imgur.com/yC7DGR8.jpeg" alt="Köse Sol Logo 2" class="floating-logo second-left"/>
-  <img src="https://i.imgur.com/81hJdEn.jpeg" alt="Köse Sağ Logo 1" class="floating-logo right-second"/>
-  <img src="https://i.imgur.com/B8t4GUS.jpeg" alt="Köse Sağ Logo 2" class="floating-logo right"/>
-
-  <header>
-    <div class="header-content">
-      <h1>Köse'nin Kerhanesi</h1>
-    </div>
-  </header>
-
-  <div class="container">
-    <section class="cinema-section">
-      <div class="cinema-header">
-        <img src="https://imgur.com/Lz1ZGxh.jpeg" alt="Yeni Sinema İkonu" />
-        <h2>Sinema</h2>
-        <img src="https://imgur.com/aU8Ren9.jpeg" alt="Sinema Yan Görsel">
-      </div>
-      <div class="video-pair">
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/uOuImMOBSMA" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/LHQ4gNlpK08" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <h2>Galeri</h2>
-      <div class="gallery">
-        <img src="https://i.imgur.com/0py85rb.jpeg" alt="Görsel 1">
-        <img src="https://i.imgur.com/yde0vzj.jpeg" alt="Görsel 3">
-        <img src="https://i.imgur.com/K4YDxHO.jpeg" alt="Görsel 2">
-        <img src="https://i.imgur.com/6VV5VKV.jpeg" alt="Görsel X">
-        <img src="https://i.imgur.com/2BbMnZO.jpeg" alt="Görsel 4">
-        <img src="https://i.imgur.com/4EIQZKL.jpeg" alt="Görsel 8">
-        <img src="https://i.imgur.com/lC4qx3i.jpeg" alt="Görsel 9">
-        <img src="https://i.imgur.com/WlLvGK9.jpeg" alt="Görsel Yeni2">
-        <span class="rainbow-border">
-          <img src="https://imgur.com/i7stNo3.jpeg" alt="Görsel Yeni">
-        </span>
-        <img src="https://i.imgur.com/plNgzx5.jpeg" alt="Görsel 10">
-        <img src="https://i.imgur.com/qubDxqT.jpeg" alt="Görsel 11">
-      </div>
-    </section>
+<img src="https://i.imgur.com/aajrx8U.jpeg" alt="Köse Sol Logo" class="floating-logo left"/>
+<img src="https://imgur.com/yC7DGR8.jpeg" alt="Köse Sol Logo 2" class="floating-logo second-left"/>
+<img src="https://i.imgur.com/81hJdEn.jpeg" alt="Köse Sağ Logo 1" class="floating-logo right-second"/>
+<img src="https://i.imgur.com/B8t4GUS.jpeg" alt="Köse Sağ Logo 2" class="floating-logo right"/>
+<header>
+  <div class="header-content">
+    <h1>Köse'nin Kerhanesi</h1>
   </div>
-
-  <footer>
-    <p>&copy; 2025 Köse'nin Kerhanesi. Tüm haklar saklıdır.</p>
-  </footer>
+</header>
+<div class="container">
+  <section class="cinema-section">
+    <div class="cinema-header">
+      <img src="https://imgur.com/Lz1ZGxh.jpeg" alt="Yeni Sinema İkonu" />
+      <h2>Sinema</h2>
+      <img src="https://imgur.com/aU8Ren9.jpeg" alt="Sinema Yan Görsel">
+    </div>
+    <div class="video-pair">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/uOuImMOBSMA" allowfullscreen></iframe>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/LHQ4gNlpK08" allowfullscreen></iframe>
+      </div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/Zr0tuI13FMg" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+  <section class="gallery-section">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <figure><img src="https://i.imgur.com/0py85rb.jpeg" alt="Görsel 1"><figcaption>Görsel 1</figcaption></figure>
+      <figure><img src="https://i.imgur.com/yde0vzj.jpeg" alt="Görsel 2"><figcaption>Görsel 2</figcaption></figure>
+      <figure><img src="https://i.imgur.com/K4YDxHO.jpeg" alt="Görsel 3"><figcaption>Görsel 3</figcaption></figure>
+      <figure><img src="https://i.imgur.com/6VV5VKV.jpeg" alt="Görsel 4"><figcaption>Görsel 4</figcaption></figure>
+      <figure><img src="https://i.imgur.com/2BbMnZO.jpeg" alt="Görsel 5"><figcaption>Görsel 5</figcaption></figure>
+      <figure><img src="https://i.imgur.com/4EIQZKL.jpeg" alt="Görsel 6"><figcaption>Görsel 6</figcaption></figure>
+      <figure><img src="https://i.imgur.com/lC4qx3i.jpeg" alt="Görsel 7"><figcaption>Görsel 7</figcaption></figure>
+      <figure><img src="https://i.imgur.com/WlLvGK9.jpeg" alt="Görsel 8"><figcaption>Görsel 8</figcaption></figure>
+      <figure class="rainbow-border"><img src="https://imgur.com/i7stNo3.jpeg" alt="Görsel 9"><figcaption>Görsel 9</figcaption></figure>
+      <figure><img src="https://i.imgur.com/plNgzx5.jpeg" alt="Görsel 10"><figcaption>Görsel 10</figcaption></figure>
+      <figure><img src="https://i.imgur.com/qubDxqT.jpeg" alt="Görsel 11"><figcaption>Görsel 11</figcaption></figure>
+    </div>
+  </section>
+</div>
+<footer>
+  <p>&copy; 2025 Köse'nin Kerhanesi. Tüm haklar saklıdır.</p>
+</footer>
 </body>
 </html>
